@@ -3,12 +3,12 @@
   
     .top-items
       .top-items__name
-        nao
+        = current_user.name
       .top-items__icons
         = link_to "#後ほど記載", class: "top-items__icons__btn top-items__icons__btn--edit" do
           = icon('far', 'edit', class: "top-items__icons__btn--edit")
           %span<>
-        = link_to "#後ほど記載", class: "top-items__icons__btn top-items__icons__btn--cog" do
+        = link_to edit_user_path(current_user), class: "top-items__icons__btn top-items__icons__btn--cog" do
           = icon('fa', 'cog', class: "top-items__icons__btn--cog")
           %span<>
   .side-bar__group-list
