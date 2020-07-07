@@ -15,6 +15,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0 20px;
+    overflow: scroll;
     .groups {
       padding: 20px 0 40px;
       &--name {
@@ -93,6 +94,7 @@
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 0 40px;
+    overflow: scroll;
     .messages {
       padding-top: 35px;
       display: flex;
