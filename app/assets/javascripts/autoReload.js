@@ -3,10 +3,10 @@ $(function(){
     if ( message.image ) {
       let html =
         `<div class="messages" data-message-id=${message.id}>
-            <div class="message__user">
+            <div class="messages__user">
               ${message.user_name}
             </div>
-            <div class="message__date">
+            <div class="messages__data">
               ${message.created_at}
             </div>
           </div>
@@ -23,7 +23,7 @@ $(function(){
           <div class="messages__user">
             ${message.user_name}
           </div>
-          <div class="message__date">
+          <div class="messages__data">
             ${message.created_at}
           </div>
         </div>
@@ -37,7 +37,8 @@ $(function(){
   }
 
   let reloadMessages = function() {
-    let last_message_id = $('.messages:last').data("message-id");
+    console.log("test");
+    let last_message_id = $('.messages:last').data("message-id") ||0; 
     $.ajax({
       url: "api/messages",
       type: 'get',

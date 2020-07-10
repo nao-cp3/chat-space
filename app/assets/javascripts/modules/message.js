@@ -1,5 +1,4 @@
 $(function(){
-  let last_message_id = $('.messages:last').data("message-id");
   function buildHTML(message){
     if (message.image) {
       let html =
@@ -7,7 +6,7 @@ $(function(){
             <div class="messages__user">
               ${message.user_name}
             </div>
-            <div class="messages__date">
+            <div class="messages__data">
               ${message.created_at}
             </div>
           </div>
@@ -24,7 +23,7 @@ $(function(){
           <div class="messages__user">
             ${message.user_name}
           </div>
-          <div class="messages__date">
+          <div class="messages__data">
             ${message.created_at}
           </div>
         </div>
