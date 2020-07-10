@@ -1,4 +1,5 @@
 $(function(){
+  let last_message_id = $('.messages:last').data("message-id");
   function buildHTML(message){
     if (message.image) {
       let html =
